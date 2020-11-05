@@ -12,6 +12,28 @@ export class SidebarComponent extends BaseSidebarComponent {
   public menu = [
     { name: 'Dashboard', link: '/app/dashboard', icon: 'dashboard' },
     {
+      name: 'UI',
+      children: [
+        ...[
+          'buttons',
+          'cards',
+          'colors',
+          'forms',
+          'icons',
+          'typography',
+          'tables',
+        ].map(ui => ({
+          name: ui[0].toUpperCase() + ui.slice(1),
+          link: `/ui/${ui}`,
+        })),
+        {
+          name: 'Right sidebar',
+          link: '/ui/right-sidebar',
+        },
+      ],
+      icon: 'view_comfy',
+    },
+    {
       name: 'Auth', children: [
       { name: 'Sign in', link: '/auth/login' },
       { name: 'Sign up', link: '/auth/sign-up' },

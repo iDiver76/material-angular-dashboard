@@ -3,13 +3,12 @@
 :host {
   margin: auto;
   display: flex;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 1rem;
 
   .mdl-button {
     font-weight: 500;
   }
-
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 1rem;
 
   .mdl-card__blank-layout-card.mdl-card {
     max-width: 450px;

@@ -14,6 +14,7 @@ import { DashboardComponent } from './pages/dashboard';
           path: 'app', component: CommonLayoutComponent, children: [
           { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' }],
         },
+        { path: 'ui', loadChildren: () => import('./pages/ui/ui.module').then(m => m.UIModule) },
         { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
         { path: 'pages', loadChildren: () => import('./pages/pages/pages.module').then(m => m.PagesModule) },
         { path: '**', redirectTo: '/pages/404' },
